@@ -1,0 +1,8 @@
+{
+  "name": "BridgeFlow",
+  "description": "Outcome-tracking & deal-flow layer for Startup ASEAN, turning connections into verified investments, partnerships, and cross-border pilots.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
