@@ -328,7 +328,7 @@ Compute:
 5. Concrete remediation actions for each gap.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemma-4-26b-a4b-it',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
@@ -453,7 +453,7 @@ Mandatory Structural Requirements:
 6. Intellectual Property, Data Sovereignty & Confidentiality Terms.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemma-4-26b-a4b-it',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
@@ -671,7 +671,7 @@ Perform deep pipeline diagnosis:
 4. Provide cultural and commercial corridor etiquette for ${opportunity.sourceCountry} -> ${opportunity.targetCountry}.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemma-4-26b-a4b-it',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
@@ -782,7 +782,7 @@ Requirements:
 4. Include a brief cultural etiquette tip explaining why this phrasing works in ${opportunity.targetCountry}.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemma-4-26b-a4b-it',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
@@ -849,7 +849,7 @@ Generate strategic ecosystem intelligence for the Organizer Impact Dashboard:
 4. Executive summary: 2 succinct paragraphs explaining how Startup ASEAN is driving real cross-border economic outcomes beyond mere introductions.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemma-4-26b-a4b-it',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
