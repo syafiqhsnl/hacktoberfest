@@ -12,8 +12,6 @@ Introductions and events are only the beginning of a startup relationship. Found
 
 BridgeFlow brings opportunity tracking, follow-up tasks, AI assistance, and outcome review into one workflow.
 
-Problem 1: How can Startup ASEAN successfully convert ecosystem connections into measurable outcomes, including investments, commercial partnerships, market expansion, and cross-border POCs?
-
 ## Features
 
 - **Opportunity board:** Track investment, partnership, expansion, and proof-of-concept opportunities through their respective stages.
@@ -173,4 +171,7 @@ To propose a change:
 
 ## License
 
-No `LICENSE` file is currently included in the repository. The existing `front/README.md` mentions Apache-2.0; the maintainer should confirm the intended license and add the corresponding `LICENSE` file before this section declares one.
+Copyright 2026 BridgeFlow contributors.
+
+Licensed under the [MIT License](LICENSE).
+
