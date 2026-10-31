@@ -38,9 +38,6 @@ export default function App() {
   const [isNewOppModalOpen, setIsNewOppModalOpen] = useState(false);
   const [reportingOutcomeForOpp, setReportingOutcomeForOpp] = useState<Opportunity | null>(null);
 
-  // Interactive Demo Walkthrough Banner
-  const [showDemoGuide, setShowDemoGuide] = useState(true);
-  const [demoStep, setDemoStep] = useState(1);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (msg: string) => {

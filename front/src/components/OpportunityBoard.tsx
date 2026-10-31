@@ -92,62 +92,57 @@ export const OpportunityBoard: React.FC<OpportunityBoardProps> = ({
 
   return (
     <div className="space-y-6">
-      
+
       {/* Top Banner / Filter Toolbar */}
       <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-2xs space-y-4">
-        
+
         {/* Row 1: Outcome Type Tabs & Search */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-          
+
           {/* Outcome Type Segmented Control with specific funnel notification */}
           <div className="flex items-center gap-1 p-1 bg-slate-100 rounded-lg overflow-x-auto">
             <button
               onClick={() => setSelectedType('Partnership')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
-                selectedType === 'Partnership'
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${selectedType === 'Partnership'
                   ? 'bg-white text-slate-900 shadow-xs font-semibold'
                   : 'text-slate-600 hover:text-slate-900'
-              }`}
+                }`}
             >
               Commercial Partnerships
             </button>
             <button
               onClick={() => setSelectedType('Investment')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
-                selectedType === 'Investment'
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${selectedType === 'Investment'
                   ? 'bg-white text-slate-900 shadow-xs font-semibold'
                   : 'text-slate-600 hover:text-slate-900'
-              }`}
+                }`}
             >
               Investments
             </button>
             <button
               onClick={() => setSelectedType('POC')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
-                selectedType === 'POC'
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${selectedType === 'POC'
                   ? 'bg-white text-slate-900 shadow-xs font-semibold'
                   : 'text-slate-600 hover:text-slate-900'
-              }`}
+                }`}
             >
               Corporate POCs
             </button>
             <button
               onClick={() => setSelectedType('Expansion')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
-                selectedType === 'Expansion'
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${selectedType === 'Expansion'
                   ? 'bg-white text-slate-900 shadow-xs font-semibold'
                   : 'text-slate-600 hover:text-slate-900'
-              }`}
+                }`}
             >
               Market Expansions
             </button>
             <button
               onClick={() => setSelectedType('ALL')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${
-                selectedType === 'ALL'
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all whitespace-nowrap ${selectedType === 'ALL'
                   ? 'bg-white text-slate-900 shadow-xs font-semibold'
                   : 'text-slate-600 hover:text-slate-900'
-              }`}
+                }`}
             >
               All Types
             </button>
@@ -168,7 +163,7 @@ export const OpportunityBoard: React.FC<OpportunityBoardProps> = ({
 
         {/* Row 2: Secondary Filters & Funnel Stage Note */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100 text-xs">
-          
+
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-slate-500 font-medium">Filter by Market:</span>
             <div className="flex items-center gap-1">
@@ -176,13 +171,12 @@ export const OpportunityBoard: React.FC<OpportunityBoardProps> = ({
                 <button
                   key={code}
                   onClick={() => setSelectedCountry(code)}
-                  className={`px-2 py-1 rounded text-xs transition-colors ${
-                    selectedCountry === code
+                  className={`px-2 py-1 rounded text-xs transition-colors ${selectedCountry === code
                       ? 'bg-slate-900 text-white font-medium'
                       : 'bg-slate-50 text-slate-600 hover:bg-slate-200'
-                  }`}
+                    }`}
                 >
-                  {code === 'ALL' ? 'All ASEAN' : `${COUNTRY_FLAGS[code]} ${code}`}
+                  {code === 'ALL' ? 'All ASEAN' : code}
                 </button>
               ))}
             </div>
