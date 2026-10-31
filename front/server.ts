@@ -254,7 +254,7 @@ Map it precisely to the Startup ASEAN pipeline framework:
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemma-4-26b-a4b-it',
       contents: contentsPayload,
       config: {
         responseMimeType: 'application/json',
