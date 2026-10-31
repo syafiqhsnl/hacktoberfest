@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Opportunity, 
-  Task, 
-  OutcomeReport 
+import {
+  Opportunity,
+  Task,
+  OutcomeReport
 } from './types.ts';
 import { Navbar } from './components/Navbar.tsx';
 import { OpportunityBoard } from './components/OpportunityBoard.tsx';
@@ -12,12 +12,12 @@ import { OrganizerImpactDashboard } from './components/OrganizerImpactDashboard.
 import { OutcomeVerificationQueue } from './components/OutcomeVerificationQueue.tsx';
 import { NewOpportunityModal } from './components/NewOpportunityModal.tsx';
 import { ReportOutcomeModal } from './components/ReportOutcomeModal.tsx';
-import { 
-  Sparkles, 
-  ArrowRight, 
-  ShieldCheck, 
-  CheckCircle2, 
-  Info, 
+import {
+  Sparkles,
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Info,
   ChevronRight,
   Layers,
   Award
@@ -26,7 +26,7 @@ import {
 export default function App() {
   const [role, setRole] = useState<'founder' | 'organizer'>('founder');
   const [activeTab, setActiveTab] = useState<string>('board');
-  
+
   // Data states
   const [opportunities, setOpportunities] = useState<Opportunity[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -250,7 +250,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
-      
+
       {/* Top Navbar */}
       <Navbar
         role={role}
@@ -263,102 +263,7 @@ export default function App() {
         stalledOpportunitiesCount={stalledCount}
       />
 
-      {/* Interactive 3-Minute Demo Guide Banner for Hackathon Judges */}
-      {showDemoGuide && (
-        <aside aria-label="Demo flow guidance" className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white border-b border-indigo-900/50 px-4 py-2.5 text-xs">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="bg-indigo-500/30 text-indigo-300 px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider">
-                Judge Walkthrough
-              </span>
-              <span className="font-semibold text-slate-200">
-                BridgeFlow 3-Minute Connection-to-Outcome Loop:
-              </span>
-            </div>
 
-            <div className="flex flex-wrap items-center gap-2 text-[11px]">
-              <button
-                onClick={() => {
-                  setRole('founder');
-                  setActiveTab('board');
-                  setIsNewOppModalOpen(true);
-                  setDemoStep(1);
-                }}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  demoStep === 1 ? 'bg-indigo-600 text-white font-semibold' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                1. Voice / Chat / Deck Ingestion
-              </button>
-              <span className="text-slate-600">→</span>
-
-              <button
-                onClick={() => {
-                  setRole('founder');
-                  setActiveTab('board');
-                  if (opportunities[0]) setSelectedOpportunity(opportunities[0]);
-                  setDemoStep(2);
-                }}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  demoStep === 2 ? 'bg-indigo-600 text-white font-semibold' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                2. Match Score (84%) & Bilateral MOU
-              </button>
-              <span className="text-slate-600">→</span>
-
-              <button
-                onClick={() => {
-                  setRole('founder');
-                  setActiveTab('tasks');
-                  setDemoStep(3);
-                }}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  demoStep === 3 ? 'bg-indigo-600 text-white font-semibold' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                3. Milestone Tasks & Report Outcome
-              </button>
-              <span className="text-slate-600">→</span>
-
-              <button
-                onClick={() => {
-                  setRole('organizer');
-                  setActiveTab('verification');
-                  setDemoStep(4);
-                }}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  demoStep === 4 ? 'bg-indigo-600 text-white font-semibold' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                4. Two-Sided Verification
-              </button>
-              <span className="text-slate-600">→</span>
-
-              <button
-                onClick={() => {
-                  setRole('organizer');
-                  setActiveTab('dashboard');
-                  setDemoStep(5);
-                }}
-                className={`px-2 py-0.5 rounded transition-colors ${
-                  demoStep === 5 ? 'bg-indigo-600 text-white font-semibold' : 'text-slate-300 hover:text-white'
-                }`}
-              >
-                5. Live Impact & Stalled Radar
-              </button>
-
-              <button
-                onClick={() => setShowDemoGuide(false)}
-                className="text-slate-400 hover:text-white ml-2 text-xs"
-                title="Dismiss Walkthrough Banner"
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        </aside>
-      )}
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
