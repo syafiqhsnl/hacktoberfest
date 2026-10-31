@@ -15,14 +15,7 @@ const PORT = Number(process.env.PORT || 3000);
 app.use(express.json({ limit: '10mb' }));
 
 // Shared Gemini client utility
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-  httpOptions: {
-    headers: {
-      'User-Agent': 'aistudio-build',
-    },
-  },
-});
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY, });
 
 // In-memory data store with seeded realistic opportunities
 let opportunities: Opportunity[] = JSON.parse(JSON.stringify(INITIAL_OPPORTUNITIES));
